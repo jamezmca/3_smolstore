@@ -30,7 +30,7 @@ export default function CartPage() {
 
     async function createCheckout() {
         try {
-            const baseURL = process.env.NEXT_PUBLIC_BASE_URL
+            const baseURL = ''//process.env.NEXT_PUBLIC_BASE_URL
             const lineItems = Object.keys(cart).map((item, itemIndex) => {
                 return {
                     price: item,
