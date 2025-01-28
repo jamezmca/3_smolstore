@@ -4,13 +4,13 @@ import Products from "@/components/Products";
 import { useEffect, useState } from "react";
 
 
-export async function getProducts() {
-  // what we'd do if we could deploy a proper backend
-  const baseURL = process.env.NEXT_PUBLIC_BASE_URL
-  const response = await fetch(baseURL + '/api/products')
-  const products = await response.json()
-  return products
-}
+// export async function getProducts() {
+//   // what we'd do if we could deploy a proper backend
+//   const baseURL = process.env.NEXT_PUBLIC_BASE_URL
+//   const response = await fetch(baseURL + '/api/products')
+//   const products = await response.json()
+//   return products
+// }
 
 export default function Home(props) {
   const [products, setProducts] = useState([])
