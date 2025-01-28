@@ -30,7 +30,7 @@ export default function CartPage() {
 
     async function createCheckout() {
         try {
-            const baseURL = ''//process.env.NEXT_PUBLIC_BASE_URL
+            const baseURL = process.env.NEXT_PUBLIC_BASE_URL
             const lineItems = Object.keys(cart).map((item, itemIndex) => {
                 return {
                     price: item,
@@ -38,7 +38,7 @@ export default function CartPage() {
                 }
             })
 
-            const response = await fetch(baseURL + '/api/checkout', {
+            const response = await fetch(baseURL + 'api/checkout', {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json'

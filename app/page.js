@@ -3,15 +3,10 @@ import Products from "@/components/Products";
 
 
 export async function getProducts() {
-  try {
-    const baseURL = process.env.NEXT_PUBLIC_BASE_URL
-    const response = await fetch(baseURL + '/api/products')
-    const products = await response.json()
-    return products
-  } catch (err) {
-    console.log(err.message)
-    return []
-  }
+  const baseURL = process.env.NEXT_PUBLIC_BASE_URL
+  const response = await fetch(baseURL + 'api/products')
+  const products = await response.json()
+  return products
 }
 
 export default async function Home(props) {
