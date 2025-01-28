@@ -38,7 +38,7 @@ export default function CartPage() {
                 }
             })
 
-            const response = await fetch(baseURL + 'api/checkout', {
+            const response = await fetch(baseURL + '/api/checkout', {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json'
